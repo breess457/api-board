@@ -2,10 +2,7 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-    <p align="center">
+<p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
@@ -20,22 +17,22 @@
 </p>
 
 ## setup project
-  clone git 
-  node -v 23.5.0
-  nest -v 10.4.9
-  ติดตั้ง npm install
+clone git 
+node -v 23.5.0
+nest -v 10.4.9
+ติดตั้ง npm install
 
 ## Run
 สร้างไฟล์ .env  หรือ เปลียน env.example เป็น .env  ข้อมูลที่ต้องใช้อยู่ใน env.example
-  npm run start
-  port:3001
+npm run start
+port:3001
 
 ## feature
-  api login
-  api สมัครสมาชิก
-  api getprofile
-  api create กระทู้
-  api update กระทู้
-  api delete กระทู้
-  api create comment
-  การใช้ token
+api login
+api สมัครสมาชิก
+api getprofile
+api create กระทู้
+api update กระทู้
+api delete กระทู้
+api create comment
+การใช้ token
