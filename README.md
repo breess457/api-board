@@ -17,22 +17,22 @@
 </p>
 
 ## setup project
-clone git 
-node -v 23.5.0
-nest -v 10.4.9
-ติดตั้ง npm install
+clone git  
+node -v 23.5.0  
+nest -v 10.4.9  
+ติดตั้ง npm install  
 
 ## Run
 สร้างไฟล์ .env  หรือ เปลียน env.example เป็น .env  ข้อมูลที่ต้องใช้อยู่ใน env.example
-npm run start
-port:3001
+npm run start  
+port:3001  
 
 ## feature
-api login
-api สมัครสมาชิก
-api getprofile
-api create กระทู้
-api update กระทู้
-api delete กระทู้
-api create comment
-การใช้ token
+api login  
+api สมัครสมาชิก  
+api getprofile  
+api create กระทู้  
+api update กระทู้  
+api delete กระทู้  
+api create comment  
+การใช้ token  
