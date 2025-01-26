@@ -47,7 +47,6 @@ export class BoardService {
 
   async findAll(category?:string) {
     const query = category ? {category:category} : {}
-    console.log("ll:",query)
     let blogger = await this.blogerModel.find(query).exec()
     if (!blogger.length) {
       return [];

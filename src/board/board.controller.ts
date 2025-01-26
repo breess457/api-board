@@ -16,7 +16,6 @@ export class BoardController {
   @UseGuards(JwtAuthGuard)
   async create(@Body() createBoardDto: CreateBoardDto, @Req() req) {
     const createBlog = await this.boardService.createBlog(createBoardDto,req.user);
-    console.log(createBlog)
     if(createBlog){
         return {
           statusCode:201,

@@ -5,7 +5,6 @@ import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
 import { config } from 'dotenv';
 import { JwtAuthGuard } from './auth/jwt.auth';
-import { FileInterceptor } from '@nestjs/platform-express';
 
 config()
 
@@ -55,10 +54,8 @@ export class UserController {
     @Body()loginUserDto:LoginUserDto,
     @Res({ passthrough:true }) response:Response
   ){
-      console.log({loginUserDto})
       try{
         const getUser = await this.userService.getLogin(loginUserDto)
-        console.log(getUser)
         if(getUser){
           const token = this.jwtService.sign(
             {id:getUser.id,username:getUser.username,firstname:getUser.firstname},

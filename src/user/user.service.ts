@@ -37,20 +37,4 @@ export class UserService {
   async getProfile(payload:Payload):Promise<User | null>{
     return await this.usersModel.findById(payload.id).select('-password').exec()
   }
-
-  findAll() {
-    return `This action returns all user`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
-  }
-
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} user`;
-  }
 }
