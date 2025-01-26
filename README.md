@@ -1,20 +1,7 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
 </p>
 
-<p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
 
 ## setup project
 clone git  
@@ -25,14 +12,28 @@ nest -v 10.4.9
 ## Run
 สร้างไฟล์ .env  หรือ เปลียน env.example เป็น .env  ข้อมูลที่ต้องใช้อยู่ใน env.example
 npm run start  
-port:3001  
+port ของ backend:3001  ต้อง 3001 เท่านั้น
 
-## feature
+## api
 api login  
 api สมัครสมาชิก  
 api getprofile  
+api แสดงกระทู้
 api create กระทู้  
 api update กระทู้  
 api delete กระทู้  
+api แสดง comment
 api create comment  
-การใช้ token  
+
+
+## libraries หรือ packagesต่างๆที่ใช้
+mongoose : ใช้ในการสร้าง schema database mongo  
+jwt : ใช้การในสร้าง token เพื่อส่งกลับไปยังหน้าบ้าน  
+dotenv : ใช้เรียก file .env  
+bcrypt : ใช้ในการ has รหัสผ่าน
+cookie-parser : เพื่อความปลดภัย และ เมือรับ request จากหน้าบ้าน เพราะหน้าบ้านเก็บ data userlog ไว้ใน cookie เหมือนกัน
+passport: ใช้ในการยืนยันตัวตนผู้ login
+
+## feature
+สร้าง token เพื่อส่งไปยัง หน้าบ้าน
+สามารถยืนยันตัวตนเมื่อ login แล้ว

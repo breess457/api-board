@@ -49,7 +49,6 @@ export class BoardController {
   @Delete('deleteblog')
   @UseGuards(JwtAuthGuard)
   async deleteBlog(@Query('blogid') blogId:string, @Req() req){
-    console.log({blogId, payload:req.user})
       try{
         const deletedata = await this.boardService.removeBlog(blogId,req.user)
         if(deletedata){
@@ -74,7 +73,6 @@ export class BoardController {
 
   @Get('detail/:id')
   findOne(@Param('id') id: string) {
-    console.log({id})
     return this.boardService.findBlogOne(id);
   }
 
@@ -104,7 +102,6 @@ export class BoardController {
   @Get('outblog')
   @UseGuards(JwtAuthGuard)
   async outBlog(@Req() req){
-      console.log("dd:",req.user)
       return await this.boardService.listBlogOut(req.user)
   }
 }
