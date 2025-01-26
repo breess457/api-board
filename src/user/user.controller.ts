@@ -1,11 +1,12 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Res, Req, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto, LoginUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
 import { config } from 'dotenv';
 import { JwtAuthGuard } from './auth/jwt.auth';
+import { FileInterceptor } from '@nestjs/platform-express';
+
 config()
 
 @Controller('user')
