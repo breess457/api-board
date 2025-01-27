@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import * as session from 'express-session';
 import * as cookieParser from 'cookie-parser'
 import {config} from 'dotenv'
+import { NextFunction, Request, Response } from 'express';
 
 config()
 async function bootstrap() {
@@ -15,6 +16,14 @@ async function bootstrap() {
     saveUninitialized: false,
     cookie: { secure: false }
   }))
+
+  app.use(function (req:Request, res:Response, next:NextFunction){
+      res.header('Access-Control-Allow-Origin', process.env.URL_FRONTEND);
+      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT ,DELETE')
+      res.header('Authorization, Origin, Content-Type, Accept')
+      next()
+  })
+  
 
   app.enableCors({
     origin:process.env.URL_FRONTEND,
