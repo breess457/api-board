@@ -30,7 +30,7 @@ async function bootstrap() {
   
 
   app.enableCors({
-    origin:process.env.URL_FRONTEND,
+    origin:[process.env.URL_FRONTEND,'https://board-datawow-production.up.railway.app/'],
     methods:'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders:'Content-Type, Authorization',
     credentials: true
