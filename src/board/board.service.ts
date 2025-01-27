@@ -47,7 +47,7 @@ export class BoardService {
 
   async findAll(category?:string) {
     const query = category ? {category:category} : {}
-    let blogger = await this.blogerModel.find(query).exec()
+    let blogger = await this.blogerModel.find(query).sort({ createDate: -1 }).exec()
     if (!blogger.length) {
       return [];
     }
