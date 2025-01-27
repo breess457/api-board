@@ -18,9 +18,13 @@ async function bootstrap() {
   }))
 
   app.use(function (req:Request, res:Response, next:NextFunction){
-      res.header('Access-Control-Allow-Origin', process.env.URL_FRONTEND);
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT ,DELETE')
-      res.header('Authorization, Origin, Content-Type, Accept')
+      // res.header('Access-Control-Allow-Origin', process.env.URL_FRONTEND);
+      // res.header('Access-Control-Allow-Methods', 'GET, POST, PUT ,DELETE')
+      // res.header('Authorization, Origin, Content-Type, Accept')
+
+      res.header('Access-Control-Allow-Origin', `${process.env.URL_FRONTEND}`);
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+      res.header('Access-Control-Allow-Headers', 'Content-Type, Accept');
       next()
   })
   
