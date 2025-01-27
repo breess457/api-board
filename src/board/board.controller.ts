@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards,Req,Query,
 import { BoardService } from './board.service';
 import { CreateBoardDto, CreateCommentBlogDto } from './dto/create-board.dto';
 import { UpdateBoardDto } from './dto/update-board.dto';
-import { JwtAuthGuard } from 'src/user/auth/jwt.auth';
+import { JwtAuthGuard } from '../user/auth/jwt.auth';
 import { JwtService } from '@nestjs/jwt';
 
 @Controller('board')

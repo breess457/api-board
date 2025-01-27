@@ -4,8 +4,8 @@ import { UpdateBoardDto } from './dto/update-board.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Bloger, CommentBlog } from './schema/blog.schema';
 import { Model } from 'mongoose';
-import { Payload } from 'src/user/dto/create-user.dto';
-import { User } from 'src/user/schema/users.schema';
+import { Payload } from '../user/dto/create-user.dto';
+import { User } from '../user/schema/users.schema' //'src/user/schema/users.schema';
 
 @Injectable()
 export class BoardService {
