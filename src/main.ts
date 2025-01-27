@@ -21,8 +21,10 @@ async function bootstrap() {
     credentials: true
   })
 
-  console.log("prosess:",process.env.URL_FRONTEND)
 
-  await app.listen(process.env.PORT ?? 3001,()=>console.log(`Start Server on Port : ${process.env.PORT}`));
+  await app.listen(process.env.PORT ?? 3001,()=>{
+    console.log(`Start Server on Port : ${process.env.PORT}`)
+    console.log("prosess:",process.env.URL_FRONTEND)
+  });
 }
 bootstrap();
