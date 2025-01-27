@@ -17,12 +17,12 @@ async function bootstrap() {
     cookie: { secure: false }
   }))
 
-  // app.use(function (req:Request, res:Response, next:NextFunction){
-  //     res.header('Access-Control-Allow-Origin', `${process.env.URL_FRONTEND}`);
-  //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  //     res.header('Access-Control-Allow-Headers', 'Content-Type, Accept');
-  //     next()
-  // })
+  app.use(function (req:Request, res:Response, next:NextFunction){
+      res.header('Access-Control-Allow-Origin', `${process.env.URL_FRONTEND}`);
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+      res.header('Access-Control-Allow-Headers', 'Content-Type, Accept');
+      next()
+  })
   
 
   app.enableCors({
